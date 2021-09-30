@@ -6,7 +6,7 @@ public class Solution {
             return nums[0];
         }
 
-        //we accept that the length is only odd number
+        //we accept that the length is odd number
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 1; i+=2) {
             if (nums[i] != nums[i+1]){
