@@ -1,35 +1,30 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
 
 public class Solution {
     public int[] intersect(int[] nums1, int[] nums2) {
-        if (nums1.length > nums2.length) {
-            return getCommonElements(nums1, nums2);
-        } else {
-            return getCommonElements(nums2, nums1);
-        }
-    }
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
 
-    private int[] getCommonElements(int[] longerNum, int[] shorterNum) {
-        Map<Integer, Integer> setShorter = new HashMap<>();
+        int i = 0,
+            j = 0,
+            n = 0;
 
-        for (int i : shorterNum) {
-            setShorter.put(i, setShorter.getOrDefault(i,0)+1);
-        }
-
-        int n = 0;
-        for (int i : longerNum) {
-            if (setShorter.getOrDefault(i, 0) > 0) {
-                shorterNum[n++] = i;
-                setShorter.put(i, setShorter.get(i) - 1);
+        while (i < nums1.length && j < nums2.length) {
+            if(nums1[i] == nums2[j]) {
+                nums1[n++] = nums1[i];
+                i++;
+                j++;
+            } else if (nums1[i] > nums2[j]) {
+                j++;
+            } else {
+                i++;
             }
         }
 
         int[] newArr = new int[n];
-        for (int i = 0; i < n; ++i) {
-            newArr[i] = shorterNum[i];
+        for (int k = 0; k < n; ++k) {
+            newArr[k] = nums1[k];
         }
-
 
         return newArr;
     }
