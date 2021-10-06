@@ -1,24 +1,22 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
 public class Solution {
     public boolean isAnagram(String s, String t) {
-        Map<Character, Integer> word1 = parseLetters(s);
-        Map<Character, Integer> word2 = parseLetters(t);
-
-        return word1.equals(word2);
-    }
-
-    private Map<Character, Integer> parseLetters(String s) {
-        Map<Character, Integer> count = new HashMap<>();
-
-        for (int i = 0; i < s.length(); ++i) {
-            char c = s.charAt(i);
-            count.put(c, count.getOrDefault(c, 0) + 1);
+        if (s == null || t == null || s.length() != t.length()) {
+            return false;
         }
 
-        return count;
+        int[] count = new int[26];
+
+        for (int i = 0; i < s.length(); ++i) {
+            count[s.charAt(i) - 'a']++;
+            count[t.charAt(i) - 'a']--;
+        }
+
+        for (int c : count) {
+            if (c != 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
