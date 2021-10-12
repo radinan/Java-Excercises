@@ -4,7 +4,7 @@ public class Solution {
         //find half
         ListNode firstHalfEnd = findHalf(head);
         //reverse half
-        ListNode secondHalfStart = reverseList(null, firstHalfEnd.next);
+        ListNode secondHalfStart = reverseList(firstHalfEnd.next);
         //compare halves
         while (secondHalfStart != null) {
             if (head.val != secondHalfStart.val) {
@@ -27,12 +27,16 @@ public class Solution {
         return slowPtr;
     }
 
-    private ListNode reverseList(ListNode prevPtr, ListNode currPtr) {
-        if (currPtr == null) return prevPtr;
+    private ListNode reverseList(ListNode head) {
+        ListNode prevPtr = null;
 
-        ListNode nextPtr = currPtr.next;
-        currPtr.next = prevPtr;
+        while(head != null) {
+            ListNode nextPtr = head.next;
+            head.next = prevPtr;
 
-        return reverseList(currPtr, nextPtr);
+            prevPtr = head;
+            head = nextPtr;
+        }
+        return prevPtr;
     }
 }
