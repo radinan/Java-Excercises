@@ -1,22 +1,16 @@
 public class Solution {
     public ListNode reverseList(ListNode head) {
-        if (head == null) {
-            return head;
-        }
+        return reverseListHelper(null, head);
+    }
 
-        ListNode prevPtr = null;
-        ListNode currPtr = head;
-        ListNode nextPtr = head.next;
-
-        while (nextPtr != null) {
-            currPtr.next = prevPtr;
-
-            prevPtr = currPtr;
-            currPtr = nextPtr;
-            nextPtr = nextPtr.next;
+    private ListNode reverseListHelper(ListNode prevPtr, ListNode currPtr) {
+        if (currPtr == null) {
+            return prevPtr;
         }
         
+        ListNode nextPtr = currPtr.next;
         currPtr.next = prevPtr;
-        return currPtr;
+
+        return reverseListHelper(currPtr, nextPtr);
     }
 }
