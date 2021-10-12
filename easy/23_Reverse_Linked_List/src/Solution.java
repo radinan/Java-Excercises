@@ -4,20 +4,19 @@ public class Solution {
             return head;
         }
 
-        ListNode originalPrev = head;
-        ListNode originalNext = originalPrev.next;
+        ListNode prevPtr = null;
+        ListNode currPtr = head;
+        ListNode nextPtr = head.next;
 
-        ListNode copyNext = new ListNode(originalPrev.val);
+        while (nextPtr != null) {
+            currPtr.next = prevPtr;
 
-        while (originalNext != null) {
-            ListNode copyPrev = new ListNode(originalNext.val);
-            copyPrev.next = copyNext;
-            copyNext = copyPrev;
-
-            originalPrev = originalPrev.next;
-            originalNext = originalNext.next;
+            prevPtr = currPtr;
+            currPtr = nextPtr;
+            nextPtr = nextPtr.next;
         }
-
-        return copyNext;
+        
+        currPtr.next = prevPtr;
+        return currPtr;
     }
 }
