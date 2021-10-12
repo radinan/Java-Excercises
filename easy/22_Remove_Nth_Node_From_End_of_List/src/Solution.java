@@ -6,7 +6,7 @@ public class Solution {
 //        ListNode l2 = new ListNode(2, l3);
 //        ListNode l1 = new ListNode(1, l2);
 
-        ListNode head = removeNthFromEnd(l4, 1);
+        ListNode head = removeNthFromEnd(l4, 2);
         System.out.println();
     }
 
