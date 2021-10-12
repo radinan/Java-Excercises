@@ -3,16 +3,15 @@ import java.util.Set;
 
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        Set<ListNode> allNodes = new HashSet<>();
-        while(head != null) {
-            if (allNodes.contains(head)) {
-                return true;
-            }
+        ListNode slowPtr = head;
+        ListNode fastPtr = head;
 
-            allNodes.add(head);
-            head = head.next;
+        while(fastPtr != null && fastPtr.next != null) {
+            slowPtr = slowPtr.next;
+            fastPtr = fastPtr.next.next;
+
+            if (slowPtr == fastPtr) return true;
         }
-
         return false;
     }
 }
