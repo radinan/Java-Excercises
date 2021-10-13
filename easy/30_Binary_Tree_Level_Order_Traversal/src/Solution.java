@@ -1,20 +1,29 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> ordered = new ArrayList<>();
-        helper(root, 0, ordered);
-        return ordered;
-    }
+        if (root == null) return new LinkedList<List<Integer>>();
 
-    private void helper(TreeNode root, int lvl, List<List<Integer>> list) {
-        if (root == null) return;
-        if (lvl >= list.size()) {
-            list.add(new ArrayList<Integer>());
+        Queue<TreeNode> visited = new LinkedList<TreeNode>();
+        List<List<Integer>> ordered = new LinkedList<List<Integer>>();
+
+        visited.add(root);
+        while (!visited.isEmpty()) {
+            int nodes = visited.size();
+
+            List<Integer> slot = new LinkedList<Integer>();
+            for (int i = 0; i < nodes; ++i) {
+                TreeNode head = visited.poll();
+                slot.add(head.val);
+
+                if (head.left != null) visited.offer(head.left);
+                if (head.right != null) visited.offer(head.right);
+            }
+            ordered.add(slot);
         }
-        list.get(lvl).add(root.val);
-        helper(root.left, lvl + 1, list);
-        helper(root.right, lvl + 1, list);
+
+        return ordered;
     }
 }
