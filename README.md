@@ -31,3 +31,14 @@
 [24. Merge Two Sorted Lists](https://github.com/radinan/Java-Excercises/blob/main/easy/24_Merge_Two_Sorted_Lists/src/Solution.java)   
 [25. Palindrome Linked List](https://github.com/radinan/Java-Excercises/blob/main/easy/25_Palindrome_Linked_List/src/Solution.java)   
 [26. Linked List Cycle](https://github.com/radinan/Java-Excercises/blob/main/easy/26_Linked_List_Cycle/src/Solution.java)    
+
+### Trees
+[27. Maximum Depth of Binary Tree](https://github.com/radinan/Java-Excercises/blob/main/easy/27_Maximum_Depth_of_Binary%20_ree/src/Solution.java)   
+[28. Validate Binary Search Tree](https://github.com/radinan/Java-Excercises/blob/main/easy/28_Validate_Binary_Search_Tree/src/Solution.java)   
+[29. Symmetric Tree](https://github.com/radinan/Java-Excercises/blob/main/easy/29_Symmetric_Tree/src/Solution.java)   
+[30. Binary Tree Level Order Traversal](https://github.com/radinan/Java-Excercises/blob/main/easy/30_Binary_Tree_Level_Order_Traversal/src/Solution.java)   
+[31. Convert Sorted Array to Binary Search Tree](https://github.com/radinan/Java-Excercises/blob/main/easy/31_Convert_Sorted_Array_to_Binary_Search_Tree/src/Solution.java)   
+
+### Sorting and Searching
+[32. Merge Sorted Array](https://github.com/radinan/Java-Excercises/blob/main/easy/32_Merge_Sorted_Array/src/Solution.java)   
+[33. First Bad Version](https://github.com/radinan/Java-Excercises/blob/main/easy/33_First_Bad_Version/src/Solution.java)   
