@@ -23,3 +23,11 @@
 [18. Implement strStr()](https://github.com/radinan/Java-Excercises/blob/main/easy/18_Implement_strStr/src/Solution.java)   
 [19. Count and Say](https://github.com/radinan/Java-Excercises/blob/main/easy/19_Count_and_Say/src/Solution.java)   
 [20. Longest Common Prefix](https://github.com/radinan/Java-Excercises/blob/main/easy/20_Longest_Common_Prefix/src/Solution.java)
+
+### Linked list
+[21. Delete Node in a Linked List](https://github.com/radinan/Java-Excercises/blob/main/easy/21_Delete_Node_in_a_Linked_List/src/Solution.java)   
+[22. Remove Nth Node From End of List](https://github.com/radinan/Java-Excercises/blob/main/easy/22_Remove_Nth_Node_From_End_of_List/src/Solution.java)   
+[23. Reverse Linked List](https://github.com/radinan/Java-Excercises/blob/main/easy/23_Reverse_Linked_List/src/Solution.java)   
+[24. Merge Two Sorted Lists](https://github.com/radinan/Java-Excercises/blob/main/easy/24_Merge_Two_Sorted_Lists/src/Solution.java)   
+[25. Palindrome Linked List](https://github.com/radinan/Java-Excercises/blob/main/easy/25_Palindrome_Linked_List/src/Solution.java)   
+[26. Linked List Cycle](https://github.com/radinan/Java-Excercises/blob/main/easy/26_Linked_List_Cycle/src/Solution.java)    
